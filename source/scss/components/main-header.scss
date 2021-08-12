@@ -1,0 +1,162 @@
+.main-header {
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 24px;
+  color: $color-black;
+  border-bottom: 1px solid $color-mercury;
+
+  &__nav {
+    position: relative;
+    display: grid;
+    grid-template-columns: auto 149px auto;
+    align-items: center;
+  }
+
+  &__img {
+    display: block;
+    margin-left: -29px;
+  }
+
+  &__close {
+    display: none;
+  }
+
+  &__burger {
+    display: none;
+  }
+
+  &__events-navigation {
+    position: absolute;
+    top: 111px;
+    left: 1px;
+  }
+
+  &__delivery {
+    position: absolute;
+    margin: 0;
+    top: 111px;
+    right: 2px;
+    font-weight: 400;
+    font-size: 15px;
+    letter-spacing: 0.2px;
+  }
+}
+
+@include tablet {
+  .main-header {
+    &__nav {
+      grid-template-columns: 149px auto;
+    }
+
+    &__img {
+      margin-left: -3px;
+      width: 113px;
+      height: 45px;
+    }
+
+    &__site-navigation {
+      position: absolute;
+      top: 111px;
+      left: 48px;
+    }
+
+    &__delivery {
+      top: 110px;
+      right: 53px;
+    }
+  }
+}
+
+@include mobile {
+  .main-header {
+    border-bottom: none;
+
+    &__nav--nojs .main-header__burger {
+      display: none;
+    }
+
+    &__nav--nojs .site-navigation {
+      display: block;
+    }
+
+    &__nav--nojs .user-navigation {
+      display: block;
+    }
+
+    &__nav {
+      grid-template-columns: 1fr;
+      justify-items: center;
+    }
+
+    &__img {
+      margin: 0;
+      width: 86px;
+      height: 35px;
+    }
+
+    &__mobile-wrapper {
+      padding-left: 30px;
+      padding-right: 30px;
+      position: relative;
+      grid-row: 1 / 2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 79px;
+      border-bottom: 1px solid $color-mercury;
+    }
+
+    &__close {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      display: block;
+    }
+
+    &__close:hover,
+    &__close:focus {
+      color: $color-downy;
+    }
+
+    &__close--hidden {
+      display: none;
+    }
+
+    &__burger {
+      position: absolute;
+      top: 25px;
+      right: 27px;
+      display: block;
+      padding: 0;
+      color: $color-black;
+    }
+
+    &__burger:hover,
+    &__burger:focus {
+      color: $color-downy;
+    }
+
+    &__burger--hidden {
+      display: none;
+    }
+
+    &__site-navigation {
+      display: none;
+      position: relative;
+      top: 0;
+      left: 0;
+      grid-row: 2 / 3;
+    }
+
+    &__user-navigation {
+      display: none;
+      position: relative;
+      grid-row: 3 / 4;
+    }
+
+    &__delivery {
+      display: none;
+    }
+  }
+}

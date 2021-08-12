@@ -1,0 +1,15 @@
+.events-navigation {
+  display: flex;
+  gap: 55px;
+
+  &__link {
+    font-size: 16px;
+    letter-spacing: 0.2px;
+  }
+}
+
+@include tablet {
+  .events-navigation {
+    display: none;
+  }
+}

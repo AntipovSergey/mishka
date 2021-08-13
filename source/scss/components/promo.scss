@@ -50,10 +50,9 @@
   &__item {
     position: relative;
     width: 50%;
-    height: 119px;
   }
 
-  &__item:first-child::before {
+  &__link--interior::before {
     position: absolute;
     content: "";
     top: 31px;
@@ -65,7 +64,7 @@
     opacity: 0.5;
   }
 
-  &__item:last-child::before {
+  &__link--toy::before {
     position: absolute;
     content: "";
     top: 32px;
@@ -94,45 +93,30 @@
     background-color: $color-fountain-blue;
   }
 
-  &__item:hover {
+  &__link:hover {
     margin-top: -5px;
-    transform: translateY(-5px);
-    height: 124px;
+    padding-bottom: 39px;
 
     &::before {
       opacity: 1;
     }
-
-    .promo__link {
-      padding-bottom: 44px;
-    }
   }
 
-  &__item:focus {
+  &__link:focus {
     margin-top: -5px;
-    transform: translateY(-5px);
-    height: 124px;
+    padding-bottom: 39px;
 
     &::before {
       opacity: 1;
     }
-
-    .promo__link {
-      padding-bottom: 44px;
-    }
   }
 
-  &__item:active {
+  &__link:active {
     margin-top: -5px;
-    transform: translateY(-5px);
-    height: 124px;
+    padding-bottom: 39px;
 
     &::before {
       opacity: 0.3;
-    }
-
-    .promo__link {
-      padding-bottom: 44px;
     }
   }
 }
@@ -216,14 +200,13 @@
     &__item {
       position: relative;
       width: 100%;
-      height: 103px;
     }
 
-    &__item:first-child::before {
+    &__link--interior::before {
       top: 20px;
     }
 
-    &__item:last-child::before {
+    &__link--toy::before {
       top: 20px;
       right: 27px;
     }
@@ -232,45 +215,31 @@
       padding-top: 24px;
       padding-left: 30px;
       padding-bottom: 31px;
-      height: 103px;
       font-size: 19px;
       line-height: 24px;
     }
 
-    &__item:hover {
-      margin: 0;
-      transform: translateY(0);
-      height: 108px;
+    &__link:hover {
+      margin-top: -5px;
+      padding-bottom: 36px;
 
       &::before {
         opacity: 1;
       }
-
-      .promo__link {
-        height: 108px;
-        padding-bottom: 44px;
-      }
     }
 
-    &__item:focus {
-      margin: 0;
-      transform: translateY(0);
-      height: 108px;
+    &__link:focus {
+      margin-top: -5px;
+      padding-bottom: 36px;
 
       &::before {
         opacity: 1;
       }
-
-      .promo__link {
-        padding-bottom: 44px;
-        height: 108px;
-      }
     }
 
-    &__item:active {
-      margin: 0;
-      transform: translateY(0);
-      height: 108px;
+    &__link:active {
+      margin-top: -5px;
+      padding-bottom: 36px;
 
       &::before {
         opacity: 0.3;

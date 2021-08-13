@@ -12,9 +12,17 @@
     align-items: center;
   }
 
+  &__logo:hover .main-header__img {
+    opacity: 0.6;
+  }
+
+  &__logo:focus .main-header__img {
+    opacity: 0.3;
+  }
+
   &__img {
     display: block;
-    margin-left: -29px;
+    margin-left: -30px;
   }
 
   &__close {
@@ -38,7 +46,6 @@
     right: 2px;
     font-weight: 400;
     font-size: 15px;
-    letter-spacing: 0.2px;
   }
 }
 

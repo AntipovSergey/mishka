@@ -1,0 +1,27 @@
+.promo {
+  height: 763px;
+  background-image: url("../../img/promo-desktop.jpg");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: $color-alabaster;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../../img/promo-desktop@2x.jpg");
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    margin: 0;
+    align-self: center;
+    width: 700px;
+    text-align: center;
+    font-size: 53px;
+    line-height: 57px;
+    color: $color-black;
+  }
+}
